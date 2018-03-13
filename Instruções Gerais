@@ -8,7 +8,6 @@ Neste ambiente, vocês encontrarão vários arquivos que servirão como material
 * [https://pt.wikipedia.org/wiki/GitHub]()
 * [https://www.youtube.com/watch?v=vJjGSxvh7TY]()
 
-
 ### *Um dos formatos mais importantes que utilizaremos é o Rmd, um formato de arquivo que permite que o usuário do RStudio, importe  e execute os comandos contidos no arquivo, diretamente na plataforma*
 
 Após realizar as leituras preliminares, tente importar para o seu RStudio o arquivo do repositório denominado "exemplo.Rmd"
