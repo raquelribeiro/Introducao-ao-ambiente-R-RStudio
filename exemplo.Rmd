@@ -1,0 +1,49 @@
+---
+title: "exemplo"
+author: "Raquel Ribeiro"
+date: "13/03/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Este documento é do tipo R Markdown. Markdown é um formato simples para autoria de documentos do tipo HTML, PDF, e MS Word. Para mais detalhes sobre como utilizar o R Markdown acesse <http://rmarkdown.rstudio.com>.
+
+Quando você clicar no botão  **Knit**, um documento que incluirá o conteúdo e qualquer código do R inserido no mesmo. Você pode gerar um código de R seguindo o exemplo abaixo: 
+
+
+### O comando library carrega o pacote instalado para dentro da sua biblioteca
+```{r}
+library(datasets)
+```
+
+### Carregue um conjunto de dados existente na memória do RStudio, denominado co2
+```{r}
+data("co2")
+```
+
+### Para consultar informações sobre os pacotes,dados e utilização dos códigos, use o comando help
+
+```{r}
+help("stats")
+help("co2")
+```
+
+### Incluindo gráficos
+
+Você pode adicionar gráficos sempre que necessitar, por exemplo, vamos criar um gráfico de linhas com as informações do conjuntpo de dados "islands"
+```{r}
+plot(co2)
+```
+
+#### Explorando
+Você poderá acessar o banco de dados do R chamado dataset e verificar quais dados estão disponíveis.A partir disso, brinque um pouco com os conjuntos de dados, visualização e gráficos que podem ser gerados.
+```{r}
+library(help="datasets")
+```
+
+Por enquanto é isso. Utilize esses comandos básicos de ajuda para explorar mais o ambiente do R.
