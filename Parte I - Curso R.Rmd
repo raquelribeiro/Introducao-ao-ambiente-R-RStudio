@@ -1,0 +1,141 @@
+---
+title: "Parte I"
+author: "Raquel Ribeiro"
+date: "13/03/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Códigos e Símbolos
+
+O R possui alguns símbolos que são utilizados na sua interface para identificar ações. Veremos o que significam os mais importantes. 
+
+1. O sinal > (sinal de maior) indica o *prompt* e quer dizer que o R está pronto para receber comandos
+
+2. O sinal + poderá aparecer no início da linha de comando, se isso acontecer, significa que ficou faltando algo na linha de comando anterior. Insira o que faltou ou, se estiver errado, aperte ESC para retornar ao *prompt* inicial >.
+
+3. O R é case-sensitive, isto é, ele diferencia letras maiúsculas de minúsculas, portanto A é diferente de a.
+
+4. O separador de casas decimais é ponto ".". A vírgula é usada para separar argumentos (informações).
+
+5. Não utilize acentos, pois ele não reconhece. De um modo geral, evite os acentos em qualquer nome que for salvar em um computador.
+
+6. Sempre que você utilizar o R em algum trabalho, deverá citá-lo. No R existe um comando que mostra como citar o R ou um de seus pacotes. Veja como fazer: 
+
+```{r citation, echo=TRUE}
+citation()
+```
+
+7. Para citar um pacote, por exemplo o vegan, basta colocar o nome do pacote entre aspas.
+
+```{r citation pckg, echo=TRUE}
+citation("vegan")
+```
+
+
+### O R como calculadora
+
+Uma das funções mais básicas do R, é a função simples de calculadora. Os operadores matemáticos básicos são:
++ para soma, - subtração, * multiplicação, / divisão e ^ exponenciação. Digite os comandos abaixo no seu console:
+
+```{r calculadora, echo=TRUE}
+2+2
+2*2
+4-2
+4/2
+2^2
+
+# Você poderá usar parênteses para expressar uma operação matemática mais complexa
+
+((2+18)*5)^2
+```
+
+### Como usar a ajuda?
+
+Muitas vezes, você precisará analisar ou estudar uma função que não conhece. Existem três formas básicas para descobrir uma função que faça aquilo que você deseja. A primeira é pesquisar dentro do R usando palavras chave usando a função help.search().
+
+Descubra como usar logaritmo
+
+```{r função Logaritmo, echo=TRUE}
+help.search("logaritmo")
+```
+
+O R não conhece o idioma português e, sendo logaritmo uma palavra em português, não foi possível encontrá-la. Desse modo, é necessário que a busca seja feita no idioma Inglês. Tente novamente
+
+```{r Funcao logarithms, echo=TRUE}
+help.search("logarithms")
+```
+
+Outro modo é substituir o comando help.search por ??
+
+```{r ??, echo=TRUE}
+??logarithms
+```
+
+### Utilizando Funções
+
+O R possui diversas funções que podem ser utilizadas para executar um comando. Assim como o help auxilia na busca por termos, você poderá utiliza-lo na busca por funções. O comando é o mesmo help(nome da função);
+
+Utilize o comando help para compreender a função plot
+
+### Demonstrações
+
+Algumas funções do R possuem demonstrações de uso. Estas demonstrações podem ser vistas usando a função demo(). Digite os comandos abaixo:
+
+```{r demo, echo=TRUE}
+demo(graphics)
+demo(persp)
+demo(image)
+```
+
+### Importando dados e criando objetos
+
+A importação de dados no R é feita a partir de dados salvos em diferentes formatos (xls, csv, txt). O formato mais utilizado é o .csv (comma separated values), pois é um formato que ocupa pouco espaço em disco e pode ser facilmente lido por qualquer editor de texto ou programa de estatística.
+
+Um conjunto de dados denominado cursoR.csv foi criado para utilizarmos como exemplo.
+
+* Para acessar o conjunto de dados, vá até o repositório GitHub indicado previamente e faça o download do arquivo. 
+* Salve-o na sua área de trabalho.
+* Abra o arquivo com um editor de texto e dê uma olhada no formato. Você poderá observar os algarismos estão separados por uma ",". Isto significa que quando lido em formato de tabela, teremos diferentes colunas. 
+* Abra o mesmo arquivo utilizando o programa excel ou equivalente (Numners, LibreOffice, Open Office)
+* Observe que os dados são divididos em cinco colunas, nomeadas como Especie, Corpo, Cauda, Pata, Sexo.
+* Agora vamos importar esse mesmo arquivo para a área de trabalho do RStudio
+* ATENÇÃO!!! É necessário instalar o pacote "readr" antes de iniciar a importação
+
+```{r}
+
+library(readr) 
+curso<-read.csv("CursoR.csv",h=T)  
+View(curso)
+```
+
+##### Note que o símbolo <- quando inserido após um termo, nomeia o objeto. Isto é, o arquivo que está sendo carregado, agora recebe o nome de "curso"
+
+
+*O comando read.csv é utilizado para importar arquivos salvos no formato csv. É possível utilizar o mesmo comando para outros tipos de arquivo, como por exemplo txt ou xls. Verifique o Help do comando read.table e observe as informações contidas no arquivo de ajuda.* 
+
+
+### Criando Objetos
+
+Vamos trabalhar um pouco a criação de objetos no R
+
+* Crie um objeto, denominado soma, que contenha a soma dos números 2,3 e 4.
+
+```{r soma}
+soma<-2+3+4
+
+# veja o resultado digitando o nome do objeto criado
+
+```
+
+* agora crie uma fórmula que contenha adição, multiplicação e divisão, utilizando os mesmos números. Chame seu objeto de formula.
+
+```{r}
+formula<-((2+3)-2)*((4)/3)
+formula
+```
+
+
