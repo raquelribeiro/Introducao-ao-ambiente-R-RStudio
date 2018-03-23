@@ -1,5 +1,5 @@
 ## Conteúdo Programático do Curso
-*O curso abordará os conteúdos abaixo. Entretanto, é importante que os estudantes leiam e se preparem para o curso, pois não será possível abordar todas as variações existentes nos tópicos descritos.
+*O curso abordará os conteúdos abaixo. Entretanto, é importante que os estudantes leiam e se preparem para o curso, pois não será possível abordar todas as variações existentes nos tópicos descritos*.
 
 1) A linguagem de programação R
 2) Entrada de dados no R
