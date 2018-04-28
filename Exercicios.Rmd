@@ -1,0 +1,102 @@
+---
+title: "Exercicios"
+author: "Raquel Ribeiro"
+date: "27/04/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Carregue o pacote MASS
+```{r}
+library(MASS)
+```
+
+### Abra o arquivo de dados mammals
+```{r}
+data(mammals)
+```
+
+### Visualize o arquivo
+```{r}
+mammals
+View(mammals)
+```
+
+### Inspecione o arquivo
+```{r}
+ls(mammals) # lista as variáveis
+summary(mammals) # fornece informações sobre média, mediana, quartis
+```
+ 
+### Organize os dados de modo crescente (observe que queremos organizar apenas uma das variáveis, a variável brain. Para selecionar uma variável, coloque o símbolo $ após o nome do arquivo e antes do nome da variável)
+```{r}
+sort(mammals$brain) # a função sort ranqueia os dados de modo crescente
+```
+
+### Crie um objeto para os dados organizados
+```{r}
+brain_org<-sort(mammals$brain)
+brain_org
+```
+
+### Faça um gráfico do tipo histograma com os dados da variável brain organizados
+```{r}
+hist (sort(mammals$brain)) #ou
+hist(brain_org)
+```
+
+### Agora faça um histograma com os dados não organizados
+```{r}
+hist(mammals$brain)
+```
+
+### Verifique o número de observações da variável brain no arquivo
+```{r}
+length(mammals$brain) # A função length refere-se à quantidade de observações presentes no arquivo ou na variável escolhida. Experimente verificar o numero de observações do arquivo todo.O que significa o resultado obtido?
+```
+
+### Fazer um gráfico de barras dos dados da variável “brain”
+```{r}
+barplot(mammals$brain) # O comando barplot faz um gráfico de barras
+```
+
+### Adicionar títulos aos eixos do gráfico
+```{r}
+barplot (mammals$brain, ylab = "peso do cérebro", col = "red") # ylab adiciona uma legenda ao eixo y. A legenda está escrita entre aspas; col adiciona cor às barras do gráfico e também deve ser especificada entre aspas. Experimente dar nome ao eixo X e colorir o gráfico de azul.
+
+```
+
+### Repita o gráfico utilizando os dados ordenados
+
+### Utilize o comando ajuda e verifique como usar a função rank
+
+### Ranqueie os dados da variável body
+
+### Calcule a média, mediana, valor máximo e valor mínimo da variável body.
+#### Note que se você precisar de ajuda é só solicitar ao programa
+
+### Faça um gráfico do tipo histograma para a variável body ranqueada
+
+### Faça um gráfico de barras para a variável body ranqueada
+
+### Faça um gráfico de pontos para a variável body sem estar ranqueada
+
+### Faça um gráfico utilizando as duas variáveis (brain e body)
+
+```{r}
+plot(mammals$brain,mammals$body)
+```
+
+### Interprete esse gráfico
+
+### Nomeie os eixos X e Y de um modo que sejam auto-explicativos
+
+### Importe o conjunto de dados denominado CursoR.csv disponível no Github
+
+### Visualize e inspecione os dados
+
+
+
